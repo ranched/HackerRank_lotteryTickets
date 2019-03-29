@@ -1,0 +1,23 @@
+{
+  "name": "superbowllottery",
+  "version": "1.0.0",
+  "description": "Solution to Hacker Rank 'Winning Lottery Tickets' bit manipulation challenge",
+  "main": "superBowlLottery.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ranched/HackerRank_lotteryTickets.git"
+  },
+  "author": "jasonstephenm@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ranched/HackerRank_lotteryTickets/issues"
+  },
+  "homepage": "https://github.com/ranched/HackerRank_lotteryTickets#readme",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.0.2"
+  }
+}

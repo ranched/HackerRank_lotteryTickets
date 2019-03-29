@@ -8,6 +8,11 @@ let tickets = [
   '0123456789'
 ];
 
+// converts a string of digits to a binarary string then to a number
+// representing whether or not the digits 0-9 are represented in
+// the input string eg. '123567' -> '0111011100' -> 476
+//input string
+//output interger
 function ticketToBinary(string) {
   let arr = new Array(10).fill(false);
   for (let i = 0; i < 10; i++) {
@@ -21,6 +26,9 @@ function mapToBinary(arrOfStringTickets) {
   return arrOfStringTickets.map(ticketToBinary);
 }
 
+//takes an array containing integers representing a binary sting
+//representing the occurances of digits from 0-9 in a string
+//
 function tallyOccurances(arr) {
   //arr is arrOfBinaryTickets
   let occurances = {};
@@ -64,7 +72,7 @@ function winningLotteryTicket(tickets) {
   return count;
 }
 
-console.log(winningLotteryTicket(tickets));
+//console.log(winningLotteryTicket(tickets));
 // console.log('tic[1]binary: ', ticketToBinary('1234567890').toString(2));
 // console.log('tic[1]binary: ', ticketToBinary('17890').toString(2));
 
@@ -89,3 +97,11 @@ console.log(winningLotteryTicket(tickets));
 // console.log('1016 | 1023', 1016 | 1023);
 // console.log('');
 // console.log('1023', 1023);
+
+exports.ticketToBinary = ticketToBinary;
+exports.mapToBinary = mapToBinary;
+exports.tallyOccurances = tallyOccurances;
+exports.checkBitPair = checkBitPair;
+exports.checkAgainstOtherTickets = checkAgainstOtherTickets;
+exports.sumWinningPairs = sumWinningPairs;
+exports.winningLotteryTicket = winningLotteryTicket;
