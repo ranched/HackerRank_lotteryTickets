@@ -33,4 +33,26 @@ describe('Super Bowl Lottery', function() {
       expect(result).to.equal(1);
     });
   });
+
+  describe('tallyOccurances', function() {
+    it('is a function', function() {
+      expect(sBL.tallyOccurances).to.be.a('function');
+    });
+    it('returns an empty arry for an empty string', function() {
+      let result = sBL.tallyOccurances('');
+      expect(result).to.eql([]);
+    });
+    it('creates nested tuple for a single instance of a digit string', function() {
+      let result = sBL.tallyOccurances('9');
+      expect(result).to.eql([[9, 1]]);
+    });
+    it('creates nested tuple for a double instance of a digit string', function() {
+      let result = sBL.tallyOccurances('99');
+      expect(result).to.eql([[9, 2]]);
+    });
+    it('creates two nested tuples for a 2 single digit string', function() {
+      let result = sBL.tallyOccurances('90');
+      expect(result).to.eql([[0, 1], [9, 1]]);
+    });
+  });
 });
